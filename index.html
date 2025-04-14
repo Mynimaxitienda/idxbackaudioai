@@ -1,42 +1,27 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baking with the Gemini API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregúntale a Gemini</title>
+    <link href="./public/style.css" rel="stylesheet">
 </head>
-
 <body>
-  <main>
-    <h1>Baking with the Gemini API</h1>
-    <form>
-      <div class="image-picker">
-        <label class="image-choice">
-          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
-          <img src="/baked_goods_1.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
-          <img src="/baked_goods_2.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
-          <img src="/baked_goods_3.jpg">
-        </label>
-      </div>
-      <div class="prompt-box">
-        <label>
-          <input name="prompt" placeholder="Enter instructions here" type="text"
-            value="Provide an example recipe for the baked goods in the image">
-        </label>
-        <button type="submit">Go</button>
-      </div>
-    </form>
-    <p class="output">(Results will appear here)</p>
-  </main>
-
-  <script type="module" src="/main.js"></script>
+    <h1>Pregúntale a Gemini</h1>
+    <div id="input-container">
+        <input type="text" id="question-input" placeholder="Escribe tu pregunta...">
+        <button id="ask-button">
+            <img src="https://i.postimg.cc/8kZXFDxS/gmsj2.png" alt="Preguntar">
+        </button>
+        <button id="microphone-button">
+            <img src="https://i.postimg.cc/wv3DyKSW/mic1.png" alt="Micrófono">
+        </button>
+    </div>
+    <div id="response">
+        <h2>Respuesta de Gemini:</h2>
+        <p id="response-text">Espera la respuesta...</p>
+    </div>
+    
+    <script src="./public/main.js"></script>
 </body>
-
 </html>
